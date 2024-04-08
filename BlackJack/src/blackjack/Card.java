@@ -3,7 +3,7 @@
  * Students can modify and extend to implement their game.
  * Add your name as an author and the date!
  */
-package ca.sheridancollege.project;
+package blackjack;
 
 /**
  * A class to be used as the base Card class for the project. Must be general enough to be instantiated for any Card
@@ -23,16 +23,16 @@ public class Card {
         this.rank = rank;
     }
 
-    public Suit getSuit() {
+    public Suit getCardSuit() {
         return suit;
     }
 
-    public Rank getRank() {
+    public Rank getCardRank() {
         return rank;
     }
 
-    public int getValue() {
-        return rank.getValue();
+    public int getCardValue() {
+        return rank.getRankValue();
     }
 
     @Override

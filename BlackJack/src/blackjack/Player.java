@@ -3,38 +3,52 @@
  * Students can modify and extend to implement their game.
  * Add your name as an author and the date!
  */
-package ca.sheridancollege.project;
+package blackjack;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public  class Player {
-
-   private final String name;
-    private int bank;
+public class Player {
+    private final String playerName;
+    private int chips;
+    private int handscore;
     private int bet;
     private List<Card> cards;
 
-    public Player(String name, int bank) {
-        this.name = name;
+    public Player(String name, int chips) {
+        this.playerName = name;
+        this.handscore = 0;
         this.bet = 0;
-        this.bank= bank;
+        this.chips= chips;
     }
 
-    public String getName() {
-        return name;
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public int getScore() {
+        return handscore;
+    }
+
+    public void addToScore(int value) {
+        handscore += value;
+    }
+
+    public void resetScore() {
+        handscore = 0;
     }
 
     public int getBet() {
         return bet;
     }
     
-     public int getBank() {
-        return bank;
+     public int getChips() {
+        return chips;
     }
      
-    public int setBank(int bet) {
-        bank += bet;
-           return bank;
+    public int setChips(int bet) {
+        chips += bet;
+           return chips;
     }
 
     public void setBet(int bet) {
@@ -42,18 +56,28 @@ public  class Player {
     }
 
     public void winBet() {
-        bank += bet;
-        System.out.println(name + " wins " + bet + " credits!");
+        chips += bet;
+        System.out.println(playerName + " won their bet and won " + bet + " chips!");
     }
 
     public void loseBet() {
-        bank -= bet;
-        System.out.println(name + " loses " + bet + " credits.");
+        chips -= bet;
+        System.out.println(playerName + " lost their bet and " + bet + " chips better luck next time.");
     }
     
     @Override
     public String toString() {
-        return name;
+        return playerName;
     }
-    
+
+   // public void clearCards() {
+    //    cards.clear();
+    //}
+
+    void setScore(int i) {
+        this.handscore = i;
+    }
 }
+
+    
+

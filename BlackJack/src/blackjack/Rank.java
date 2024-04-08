@@ -1,4 +1,4 @@
-package ca.sheridancollege.project;
+package blackjack;
 
     public enum Rank {
         ACE(1),
@@ -21,7 +21,7 @@ package ca.sheridancollege.project;
             this.value = value;
         }
     
-        public int getValue() {
+        public int getRankValue() {
             return value;
         }
     }

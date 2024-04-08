@@ -1,4 +1,4 @@
-package ca.sheridancollege.project;
+package blackjack;
 
 public enum Suit {
     CLUBS,

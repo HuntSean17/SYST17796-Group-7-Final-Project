@@ -3,25 +3,16 @@
  * Students can modify and extend to implement their game.
  * Add your name as an author and the date!
  */
-package ca.sheridancollege.project;
+package blackjack;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
-/**
- * A concrete class that represents any grouping of cards for a Game. HINT, you might want to subclass this more than
- * once. The group of cards has a maximum size attribute which is flexible for reuse.
- *
- * @author dancye
- * @author Paul Bonenfant Jan 2020
- */
 public class GroupOfCards {
 
-    //The group of cards, stored in an ArrayList
-    private ArrayList<Card> cards;
-    private int size;//the size of the grouping
+    private final List<Card> cards;
 
-    //creates a deck of cards using values from Suit and Rank will be called when game starts
     public GroupOfCards() {
         cards = new ArrayList<>();
         for (int i = 0; i < Suit.values().length; i++) {
